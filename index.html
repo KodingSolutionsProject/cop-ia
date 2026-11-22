@@ -1,0 +1,425 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="COP-IA, asistente de normativa de tráfico. Información, privacidad y contacto de Koding Solutions Project.">
+  <title>COP-IA | Koding Solutions Project</title>
+  <style>
+    :root {
+      --blue: #1769c2;
+      --navy: #172b4d;
+      --muted: #58677d;
+      --line: #e1e8f0;
+      --bg: #f5f8fc;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--navy);
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      line-height: 1.7;
+    }
+    header {
+      background: #fff;
+      border-bottom: 1px solid var(--line);
+      padding: 18px 24px;
+    }
+    .header-inner {
+      max-width: 1000px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .brand {
+      font-weight: 800;
+      letter-spacing: .8px;
+      color: var(--navy);
+    }
+    nav { display: flex; gap: 18px; flex-wrap: wrap; }
+    nav a, a { color: var(--blue); }
+    nav a { text-decoration: none; font-weight: 600; }
+    .hero {
+      background: linear-gradient(135deg, #1769c2, #123e75);
+      color: white;
+      text-align: center;
+      padding: 65px 20px;
+    }
+    .hero h1 { font-size: 48px; margin: 0; }
+    .hero p { max-width: 650px; margin: 15px auto; }
+    main { max-width: 1000px; margin: 35px auto; padding: 0 18px; }
+    .card {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 28px;
+      margin-bottom: 22px;
+      box-shadow: 0 3px 15px rgba(20,50,90,.035);
+    }
+    h2 { margin-top: 0; color: var(--navy); }
+    h3 { color: var(--blue); margin-top: 30px; }
+    p { margin: 10px 0 16px; }
+    .notice {
+      border-left: 4px solid var(--blue);
+      background: #edf5ff;
+      padding: 14px 18px;
+      border-radius: 5px;
+    }
+    footer {
+      text-align: center;
+      padding: 30px 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    @media(max-width:600px) {
+      .hero h1 { font-size: 36px; }
+      .card { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="brand">KODING SOLUTIONS PROJECT</div>
+      <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#privacidad">Privacidad</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="inicio">
+    <h1>COP-IA</h1>
+    <p>Asistente de normativa de tráfico</p>
+    <p>Consulta de infracciones y normativa de circulación
+       mediante búsquedas por palabras e inteligencia artificial.</p>
+  </section>
+
+  <main>
+    <section class="card">
+      <h2>¿Qué es COP-IA?</h2>
+      <p>
+        COP-IA es una aplicación de consulta y apoyo para
+        localizar posibles infracciones relacionadas con
+        la normativa española de tráfico.
+      </p>
+      <p>
+        Permite realizar búsquedas por palabras y consultas
+        asistidas por inteligencia artificial.
+      </p>
+      <div class="notice">
+        COP-IA es un proyecto independiente. No es una aplicación
+        oficial de la Dirección General de Tráfico ni de ninguna
+        administración pública o cuerpo policial.
+        Los resultados son orientativos y deben contrastarse
+        con las fuentes oficiales.
+      </div>
+    </section>
+
+    <section class="card" id="privacidad">
+      <h2>Política de privacidad y protección de datos</h2>
+      <p>
+        Esta política explica cómo COP-IA trata los datos
+        durante el uso de la aplicación.
+        COP-IA está dirigida exclusivamente a personas
+        mayores de 18 años.
+      </p>
+
+      <h3>1. Responsable y contacto</h3>
+      <p>
+        Responsable del tratamiento: Enrique Huerta Mezquita.
+      </p>
+      <p>
+        Correo electrónico de contacto y privacidad:
+        <a href="mailto:koding.solutions.project@gmail.com">
+          koding.solutions.project@gmail.com
+        </a>.
+      </p>
+
+      <h3>2. Acceso y funcionamiento</h3>
+      <p>
+        La versión inicial de COP-IA es gratuita y no requiere
+        que el usuario se registre mediante correo electrónico
+        ni contraseña.
+      </p>
+      <p>
+        La aplicación utiliza autenticación anónima de Supabase,
+        que genera un identificador técnico para gestionar la
+        sesión y las comunicaciones con los servicios necesarios.
+      </p>
+      <p>
+        Este identificador no identifica directamente por nombre
+        al usuario, pero puede constituir un dato personal.
+        Supabase Auth también registra datos técnicos de sesión,
+        como la dirección IP, el agente de usuario y fechas
+        de acceso o renovación.
+      </p>
+
+      <h3>3. Historial de búsquedas y favoritos</h3>
+      <p>
+        COP-IA conserva en el propio dispositivo un historial
+        de las últimas 50 búsquedas, tanto por palabras como
+        asistidas por inteligencia artificial.
+      </p>
+      <p>
+        En las búsquedas por palabras se conserva la consulta
+        y el primer resultado. Al seleccionar una entrada del
+        historial, la aplicación vuelve a ejecutar la consulta.
+      </p>
+      <p>
+        Los favoritos se guardan exclusivamente en el dispositivo.
+        El historial y los favoritos no se sincronizan con
+        Supabase ni con otros dispositivos.
+      </p>
+      <p>
+        Estos datos pueden perderse al desinstalar la aplicación
+        o borrar sus datos.
+      </p>
+
+      <h3>4. Preferencias de la aplicación</h3>
+      <p>
+        COP-IA guarda localmente determinadas preferencias,
+        como el modo de búsqueda seleccionado, las normativas
+        activadas y la configuración de contraste.
+      </p>
+      <p>
+        Estas preferencias permanecen en el dispositivo
+        y no se sincronizan con servidores ni con otros dispositivos.
+      </p>
+
+      <h3>5. Consultas mediante inteligencia artificial</h3>
+      <p>
+        Cuando el usuario realiza una consulta mediante IA,
+        el texto introducido se transmite mediante una conexión
+        cifrada a los servicios de Supabase y, a través de sus
+        funciones de procesamiento, a la API de Google Gemini.
+      </p>
+      <p>
+        La finalidad es analizar la descripción de los hechos,
+        contrastar su contenido con la información normativa
+        disponible y ofrecer posibles infracciones relacionadas.
+      </p>
+      <p>
+        El historial conservado localmente no debe confundirse
+        con el procesamiento técnico que requiere enviar
+        consultas a servicios externos.
+      </p>
+      <div class="notice">
+        No introduzcas matrículas, números de bastidor,
+        nombres, apellidos, DNI, domicilios, datos de
+        implicados o testigos, ni información policial
+        operativa o confidencial.
+      </div>
+      <p>
+        Las respuestas de la IA son orientativas y pueden
+        contener errores. Deben contrastarse con la normativa
+        y las fuentes oficiales vigentes.
+      </p>
+
+      <h3>6. Mensajes y avisos</h3>
+      <p>
+        COP-IA puede descargar desde Supabase mensajes
+        informativos sobre novedades, mejoras, actualizaciones,
+        cambios de funcionamiento y avisos técnicos.
+        Esta funcionalidad no requiere facilitar un correo
+        electrónico ni registrarse.
+      </p>
+
+      <h3>7. Sugerencias e informes de errores</h3>
+      <p>
+        Si utilizas esta función, se transmiten a Supabase
+        el tipo de comunicación seleccionado y el texto escrito.
+      </p>
+      <p>
+        Los datos se almacenan para revisar las comunicaciones,
+        corregir fallos y mejorar la aplicación.
+        No incluyas datos personales ni información policial
+        confidencial.
+      </p>
+      <p>
+        Las comunicaciones marcadas como revisadas se eliminan
+        mediante una tarea diaria cuando han transcurrido
+        más de 90 días desde su resolución.
+        Las pendientes se conservan mientras sea necesario
+        gestionarlas.
+      </p>
+
+      <h3>8. Servicios y almacenamiento</h3>
+      <p>
+        COP-IA utiliza Supabase para autenticación anónima,
+        gestión de sesiones, acceso a información normativa,
+        procesamiento de consultas y recepción de sugerencias.
+      </p>
+      <p>
+        La infraestructura principal de base de datos
+        está alojada en la región de Irlanda, dentro
+        de la Unión Europea.
+      </p>
+      <p>
+        Supabase puede tratar identificadores anónimos,
+        direcciones IP, información técnica del dispositivo
+        o navegador y fechas relacionadas con las sesiones.
+      </p>
+      <p>
+        COP-IA utiliza también Google Gemini para procesar
+        las consultas realizadas mediante inteligencia artificial.
+        Determinados servicios técnicos de ambos proveedores
+        pueden implicar tratamientos o transferencias
+        internacionales de datos sujetos a las garantías
+        de protección de datos aplicables.
+      </p>
+      <p>
+        El historial, los favoritos y las preferencias
+        se almacenan localmente en el dispositivo y no
+        se sincronizan mediante estas funcionalidades.
+      </p>
+
+      <h3>9. Finalidades y bases jurídicas</h3>
+      <p>
+        Los datos de sesión y las consultas se tratan para
+        prestar las funciones solicitadas, conforme al
+        artículo 6.1.b del RGPD cuando resulte aplicable.
+      </p>
+      <p>
+        Los datos técnicos de seguridad y las sugerencias
+        pueden tratarse sobre la base del interés legítimo
+        de proteger y mejorar el servicio, conforme al
+        artículo 6.1.f, sujeto a la evaluación correspondiente.
+      </p>
+      <p>
+        Las solicitudes de protección de datos se gestionan
+        para cumplir obligaciones legales, conforme
+        al artículo 6.1.c del RGPD.
+      </p>
+
+      <h3>10. Conservación y proveedores</h3>
+      <p>
+        Los identificadores anónimos y las sesiones se conservan
+        mientras sean necesarios para prestar y proteger
+        el servicio, según la configuración de Supabase.
+      </p>
+      <p>
+        Los registros técnicos, datos de seguridad y copias
+        de seguridad de los proveedores pueden tener plazos
+        de conservación diferentes, conforme a sus políticas
+        y condiciones contractuales.
+      </p>
+      <p>
+        La base de datos principal de COP-IA se encuentra
+        alojada en Irlanda, dentro de la Unión Europea.
+      </p>
+      <p>
+        Las consultas de inteligencia artificial se procesan
+        mediante la API de Google Gemini en su modalidad
+        de pago. Conforme a las condiciones aplicables,
+        Google no utiliza las consultas y respuestas para
+        entrenar o mejorar sus modelos, aunque puede realizar
+        tratamientos limitados por seguridad y prevención
+        de abusos.
+      </p>
+      <p>
+        Determinadas operaciones de Supabase y Google pueden
+        implicar transferencias internacionales de datos,
+        sujetas a las garantías contractuales y legales aplicables.
+      </p>
+      <p>
+        COP-IA no almacena deliberadamente el contenido de
+        las consultas de IA en tablas de historial del servidor.
+        El historial de búsquedas y los favoritos se conservan
+        localmente en el dispositivo.
+      </p>
+
+      <h3>11. Límites de consultas de IA</h3>
+      <p>
+        Se prevé incorporar contadores técnicos asociados
+        a identificadores anónimos para limitar el número
+        de consultas de IA. Esta función todavía no está activa.
+        Las condiciones y los plazos de conservación se
+        actualizarán cuando se implemente.
+      </p>
+
+      <h3>12. Derechos de protección de datos</h3>
+      <p>
+        Puedes ejercer los derechos de acceso, rectificación,
+        supresión, oposición, limitación del tratamiento
+        y portabilidad cuando resulten aplicables.
+      </p>
+      <p>
+        Para ejercerlos, escribe a:
+        <a href="mailto:koding.solutions.project@gmail.com">
+          koding.solutions.project@gmail.com
+        </a>.
+      </p>
+      <p>
+        La respuesta se facilitará normalmente en el plazo
+        de un mes. Para suprimir una cuenta anónima será
+        necesario verificar de forma proporcionada su
+        titularidad. Conocer únicamente el identificador
+        no acredita esa titularidad.
+      </p>
+      <p>
+        No envíes documentación ni información policial
+        confidencial.
+      </p>
+      <p>
+        Puedes presentar una reclamación ante la
+        <a href="https://www.aepd.es/" target="_blank" rel="noopener noreferrer">
+          Agencia Española de Protección de Datos
+        </a>.
+      </p>
+
+      <h3>13. Solicitud de eliminación de datos</h3>
+      <p>
+        Para solicitar la eliminación de una cuenta anónima
+        y de los datos personales asociados, envía un correo
+        a
+        <a href="mailto:koding.solutions.project@gmail.com?subject=Solicitud%20de%20supresi%C3%B3n%20de%20datos%20COP-IA">
+          koding.solutions.project@gmail.com
+        </a>
+        indicando que deseas ejercer el derecho de supresión
+        de datos de COP-IA.
+      </p>
+      <p>
+        El responsable podrá solicitar una comprobación
+        proporcionada del control de la sesión anónima.
+        No es necesario enviar el DNI ni documentación
+        personal por defecto.
+      </p>
+      <p>
+        La solicitud será atendida conforme a los plazos
+        y requisitos establecidos en la normativa aplicable.
+      </p>
+    </section>
+
+    <section class="card" id="contacto">
+      <h2>Contacto</h2>
+      <p>
+        Para consultas relacionadas con COP-IA,
+        privacidad, protección de datos o solicitudes
+        de supresión:
+      </p>
+      <p>
+        <a href="mailto:koding.solutions.project@gmail.com">
+          koding.solutions.project@gmail.com
+        </a>
+      </p>
+      <p>
+        Responsable: Enrique Huerta Mezquita.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <strong>Koding Solutions Project</strong>
+    <p>COP-IA · Asistente de normativa de tráfico</p>
+    <p>Proyecto independiente · No oficial de la DGT</p>
+  </footer>
+</body>
+</html>
