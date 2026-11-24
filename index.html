@@ -158,10 +158,11 @@
         correo electrónico ni contraseña.
       </p>
       <p>
-        Utiliza autenticación anónima de Supabase, que genera un identificador de cuenta
-        y trata datos técnicos como la dirección IP, el agente de usuario y las fechas de sesión.
-        Aunque el identificador no revela directamente el nombre del usuario, puede constituir
-        un dato personal.
+        Utiliza autenticación anónima de Supabase, que genera un identificador de sesión,
+        junto con un identificador técnico del dispositivo (Android ID) y datos técnicos
+        como la dirección IP, el agente de usuario y las fechas de sesión.
+        Aunque estos identificadores no revelan directamente el nombre del usuario,
+        pueden constituir un dato personal.
       </p>
       <p>
         El historial de las últimas 50 búsquedas, los favoritos y las preferencias de la
@@ -248,8 +249,9 @@
         diferentes conforme a las condiciones de los proveedores.
       </p>
       <p>
-        Los identificadores anónimos también se utilizan para gestionar y contabilizar los límites
-        periódicos de consultas con inteligencia artificial asociados a cada instalación. Al tratarse de un
+        Los identificadores de sesión y del dispositivo también se utilizan para gestionar y contabilizar
+        los límites periódicos de consultas con inteligencia artificial asociados a cada dispositivo,
+        evitando reinicios indebidos del cupo tras desinstalar la aplicación. Al tratarse de un
         servicio gratuito respaldado por proveedores externos de pago, el responsable se reserva el derecho de
         modificar los cupos o suspender y limitar temporalmente el acceso a las consultas con IA en
         cualquier momento por motivos técnicos, operativos o de control de facturación, manteniendo operativa
