@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="COP-IA, asistente de normativa de tráfico. Información, privacidad y contacto de Koding Solutions Project.">
+  <meta name="description" content="COP-IA, asistente de normativa de tráfico. Información, fuentes oficiales, privacidad y contacto de Koding Solutions Project.">
   <title>COP-IA | Koding Solutions Project</title>
   <style>
     :root {
@@ -64,6 +64,13 @@
     h2 { margin-top: 0; color: var(--navy); }
     h3 { color: var(--blue); margin-top: 30px; }
     p { margin: 10px 0 16px; }
+    ul.sources-list {
+      margin: 12px 0 16px;
+      padding-left: 20px;
+    }
+    ul.sources-list li {
+      margin-bottom: 8px;
+    }
     .muted {
       color: var(--muted);
       font-size: 14px;
@@ -94,6 +101,7 @@
       <div class="brand">KODING SOLUTIONS PROJECT</div>
       <nav>
         <a href="#inicio">Inicio</a>
+        <a href="#fuentes-oficiales">Fuentes oficiales</a>
         <a href="#privacidad">Privacidad</a>
         <a href="#contacto">Contacto</a>
       </nav>
@@ -120,12 +128,35 @@
         asistidas por inteligencia artificial.
       </p>
       <div class="notice">
-        COP-IA es un proyecto independiente. No es una aplicación
-        oficial de la Dirección General de Tráfico ni de ninguna
-        administración pública o cuerpo policial.
-        Los resultados son orientativos y deben contrastarse
-        con las fuentes oficiales.
+        <strong>Aviso de exención de responsabilidad:</strong> COP-IA es un proyecto independiente
+        de carácter estrictamente informativo y educativo. No representa, pertenece ni está afiliada
+        a la Dirección General de Tráfico (DGT), al Ministerio del Interior ni a ningún otro organismo
+        gubernamental o entidad oficial. Los resultados son orientativos y deben contrastarse siempre
+        con las publicaciones oficiales.
       </div>
+    </section>
+
+    <section class="card" id="fuentes-oficiales">
+      <h2>Fuentes oficiales de información</h2>
+      <p>
+        Toda la información normativa, artículos, cuantías sancionadoras, detracciones de puntos
+        y señales mostrados en COP-IA proceden de fuentes oficiales públicas del Estado español,
+        consultables directamente en los siguientes organismos:
+      </p>
+      <ul class="sources-list">
+        <li>
+          <strong>Boletín Oficial del Estado (BOE — Legislación consolidada sobre Tráfico, Circulación de Vehículos a Motor y Seguridad Vial):</strong>
+          <a href="https://www.boe.es" target="_blank" rel="noopener noreferrer">https://www.boe.es</a>
+        </li>
+        <li>
+          <strong>Dirección General de Tráfico (DGT):</strong>
+          <a href="https://www.dgt.es" target="_blank" rel="noopener noreferrer">https://www.dgt.es</a>
+        </li>
+        <li>
+          <strong>Ministerio del Interior:</strong>
+          <a href="https://www.interior.gob.es" target="_blank" rel="noopener noreferrer">https://www.interior.gob.es</a>
+        </li>
+      </ul>
     </section>
 
     <section class="card" id="privacidad">
@@ -137,7 +168,7 @@
       </p>
       <p class="muted">Última actualización: noviembre de 2026.</p>
 
-      <h3>1. Responsable y contacto</h3>
+      <h3>1. Responsable, fuentes oficiales y contacto</h3>
       <p>
         Responsable del tratamiento:<br>
         Enrique Huerta Mezquita.<br>
@@ -148,179 +179,10 @@
       </p>
       <p>
         COP-IA es un proyecto independiente. No es una aplicación oficial de la
-        Dirección General de Tráfico, de ninguna administración pública ni de ningún
-        cuerpo policial.
-      </p>
-
-      <h3>2. Datos tratados y almacenamiento local</h3>
-      <p>
-        La versión inicial de COP-IA es gratuita y no requiere registro con nombre,
-        correo electrónico ni contraseña.
+        Dirección General de Tráfico (DGT), del Ministerio del Interior ni de ninguna
+        administración pública o cuerpo policial.
       </p>
       <p>
-        Utiliza autenticación anónima de Supabase, que genera un identificador de sesión,
-        junto con un identificador técnico del dispositivo (Android ID) y datos técnicos
-        como la dirección IP, el agente de usuario y las fechas de sesión.
-        Aunque estos identificadores no revelan directamente el nombre del usuario,
-        pueden constituir un dato personal.
-      </p>
-      <p>
-        El historial de las últimas 50 búsquedas, los favoritos y las preferencias de la
-        aplicación se guardan en el dispositivo y no se sincronizan con nuestros servidores.
-        Pueden perderse al desinstalar la aplicación o borrar sus datos.
-      </p>
-      <p>
-        En las búsquedas se conservará localmente tanto la consulta como el primer resultado.
-        Al seleccionar una búsqueda del historial, la consulta se ejecuta de nuevo.
-      </p>
-
-      <h3>3. Consultas con inteligencia artificial</h3>
-      <p>
-        Cuando utilizas la búsqueda mediante IA, el texto introducido se transmite mediante
-        conexiones cifradas a Supabase y a la API de Google Gemini para analizar los hechos
-        y mostrar posibles infracciones de tráfico.
-      </p>
-      <p>
-        COP-IA no guarda deliberadamente estas consultas en tablas de historial del servidor.
-        Esto no excluye el procesamiento técnico necesario por parte de los proveedores.
-      </p>
-      <div class="notice">
-        No introduzcas nombres, DNI, matrículas, domicilios, números de bastidor, datos de
-        implicados o testigos ni información policial operativa o confidencial.
-      </div>
-      <p>
-        Las respuestas de la IA son orientativas y pueden contener errores. Contrasta siempre
-        los resultados con la normativa oficial vigente.
-      </p>
-
-      <h3>4. Proveedores y transferencias</h3>
-      <p>
-        COP-IA utiliza Supabase para la autenticación anónima, las sesiones, la información normativa,
-        los servicios técnicos y las sugerencias. La base de datos principal está alojada
-        en Irlanda, dentro de la Unión Europea.
-      </p>
-      <p>
-        Google Gemini procesa las consultas de IA mediante su API de pago. Según las condiciones
-        aplicables, Google no utiliza estas consultas y respuestas para entrenar o mejorar sus modelos,
-        aunque puede realizar tratamientos limitados por seguridad y prevención de abusos.
-      </p>
-      <p>
-        Determinados servicios pueden implicar tratamientos o transferencias internacionales
-        de datos, sujetos a las garantías legales y contractuales aplicables.
-      </p>
-
-      <h3>5. Sugerencias y avisos</h3>
-      <p>
-        Si envías una sugerencia o informas de un error, se almacenan en Supabase el tipo y el texto
-        de tu comunicación, inicialmente con estado pendiente, para revisarla y mejorar el servicio.
-      </p>
-      <p>
-        Las comunicaciones revisadas se eliminan mediante una tarea diaria cuando han transcurrido
-        más de 90 días desde su resolución. Las pendientes se conservan mientras
-        sea necesario gestionarlas.
-      </p>
-      <p>
-        No incluyas datos personales ni información confidencial. COP-IA también puede mostrar
-        avisos informativos descargados desde Supabase, sin necesidad de facilitar un correo electrónico.
-      </p>
-
-      <h3>6. Finalidades y bases jurídicas</h3>
-      <p>
-        Los datos de sesión y las consultas se tratan para prestar las funciones solicitadas
-        (artículo 6.1.b del RGPD, cuando resulte aplicable).
-      </p>
-      <p>
-        Los datos técnicos de seguridad y las sugerencias pueden tratarse sobre la base del interés legítimo
-        de proteger y mejorar el servicio (artículo 6.1.f, sujeto a la evaluación correspondiente).
-      </p>
-      <p>
-        Las solicitudes de protección de datos se gestionan para cumplir obligaciones legales
-        (artículo 6.1.c).
-      </p>
-
-      <h3>7. Conservación de los datos</h3>
-      <p>
-        Los identificadores anónimos se mantienen activos mientras la cuenta permanezca en uso; las sesiones
-        inactivas o cuentas sin actividad prolongada podrán depurarse periódicamente tras un máximo de 12 meses
-        de inactividad, salvo solicitud previa de supresión.
-      </p>
-      <p>
-        Los registros técnicos, datos de seguridad y copias de respaldo pueden tener plazos
-        diferentes conforme a las condiciones de los proveedores.
-      </p>
-      <p>
-        Los identificadores de sesión y del dispositivo también se utilizan para gestionar y contabilizar
-        los límites periódicos de consultas con inteligencia artificial asociados a cada dispositivo,
-        evitando reinicios indebidos del cupo tras desinstalar la aplicación. Al tratarse de un
-        servicio gratuito respaldado por proveedores externos de pago, el responsable se reserva el derecho de
-        modificar los cupos o suspender y limitar temporalmente el acceso a las consultas con IA en
-        cualquier momento por motivos técnicos, operativos o de control de facturación, manteniendo operativa
-        la búsqueda tradicional por normativa.
-      </p>
-
-      <h3>8. Tus derechos y eliminación de cuenta</h3>
-      <p>
-        Puedes ejercer tus derechos de acceso, rectificación, supresión, oposición,
-        limitación del tratamiento y portabilidad, cuando resulten aplicables, escribiendo a:<br>
-        <a href="mailto:koding.solutions.project@gmail.com">
-          koding.solutions.project@gmail.com
-        </a>
-      </p>
-      <p>
-        Las solicitudes se responderán normalmente en el plazo de un mes.
-      </p>
-      <p>
-        Para eliminar una cuenta anónima puede ser necesario verificar de forma proporcionada
-        su titularidad. El identificador permite localizar la cuenta, pero no acredita
-        por sí solo quién la controla.
-      </p>
-      <p>
-        No envíes documentación personal ni información policial confidencial.
-      </p>
-      <p>
-        También puedes presentar una reclamación ante la
-        <a href="https://www.aepd.es/" target="_blank" rel="noopener noreferrer">
-          Agencia Española de Protección de Datos: www.aepd.es
-        </a>.
-      </p>
-
-      <div class="notice">
-        <strong>Identificador de tu cuenta anónima y protección:</strong><br>
-        Puedes seleccionarlo y copiarlo desde <em>Ajustes &gt; Mi cuenta</em> o al final del
-        apartado de privacidad de la aplicación para localizar tu cuenta al solicitar su eliminación
-        por correo electrónico.<br><br>
-        No lo compartas con terceros. Una vez enviado por correo para solicitar la baja, se te pedirá
-        enviar un código único desde <em>Ajustes &gt; Sugerencias y errores</em> para verificar su titularidad.
-      </div>
-
-      <p>
-        <strong>Importante:</strong> COP-IA es una herramienta de consulta y apoyo. No sustituye la normativa oficial,
-        el criterio profesional ni la supervisión humana.
-      </p>
-    </section>
-
-    <section class="card" id="contacto">
-      <h2>Contacto</h2>
-      <p>
-        Para consultas relacionadas con COP-IA,
-        privacidad, protección de datos o solicitudes
-        de supresión:
-      </p>
-      <p>
-        <a href="mailto:koding.solutions.project@gmail.com?subject=Solicitud%20de%20supresi%C3%B3n%20de%20datos%20COP-IA">
-          koding.solutions.project@gmail.com
-        </a>
-      </p>
-      <p>
-        Responsable: Enrique Huerta Mezquita.
-      </p>
-    </section>
-  </main>
-
-  <footer>
-    <strong>Koding Solutions Project</strong>
-    <p>COP-IA · Asistente de normativa de tráfico</p>
-    <p>Proyecto independiente · No oficial de la DGT</p>
-  </footer>
-</body>
-</html>
+        Fuentes oficiales de la información normativa consultada en la aplicación:<br>
+        • Boletín Oficial del Estado (BOE): <a href="https://www.boe.es" target="_blank" rel="noopener noreferrer">https://www.boe.es</a><br>
+        • Dirección General de Tráfico (DGT): <a href="https://www.dgt.es" target="_blank" rel="noopener noreferrer">
